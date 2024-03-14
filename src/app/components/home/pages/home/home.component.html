@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-3 col-sm-6" *ngFor="let list of listPost"   [routerLink]="['blog',list.id]">
+    <div class="card mb-3">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ list.title }}</h5>
+        <p class="card-text">
+          {{ list.body | slice:0:100 }}{{list.body.length > 100 ? ' ...' : '' }}
+        </p>
+        <p class="card-text">
+          <small class="text-body-secondary">{{ list.dateTime | date }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

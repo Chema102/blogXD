@@ -1,0 +1,17 @@
+<button class="btn btn-primary mb-3" (click)="regresar()">regresar</button>
+<form [formGroup]="blogForm" (ngSubmit)="onSubmit()" >
+  <div class="mb-3">
+    <label class="form-label">Titulo</label>
+    <input class="form-control" formControlName="title"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Body</label>
+    <textarea class="form-control" style="height: 100px" formControlName="body"></textarea>
+  </div>
+  <!-- <div class="mb-3">
+    <label class="form-label">Categorias</label>
+    <input class="form-control" />
+  </div> -->
+
+  <button  type="submit" class="btn btn-primary mb-3">Submit</button>
+</form>
